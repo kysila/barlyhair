@@ -1,0 +1,67 @@
+extends ../layout/main
+
+block style
+    link(rel="stylesheet" type="text/css" href="../slick/slick.css")
+    link(rel="stylesheet" type="text/css" href="../slick/slick-theme.css")
+    link(rel="stylesheet" href="../css/style.css")
+
+block title
+    title BARLY
+
+block header
+    block variables
+        - const slider = false
+    include ../modules/header
+
+block content
+    .page-wrapper
+        h2 CALL BACK
+        .box
+            h3 Открытие
+            ul.list
+                li - ___(имя клиента) добрый день/приветствую, меня зовут ____, салон Barly/меня зовут ___(имя) администратор, салона Barly. Удобно говорить?
+                li - ...
+            h3 Актуализация
+            ul.list
+                li - Мы ранее с вами общались по поводу записи на услугу/процедуру ___ (название). Звоню вам, так как у нас освободилось место для записи на ___(дата) в ___(время) в ___ (название локации). На данное время у вас получиться записаться?
+                li - ...
+            .accordion-container
+                .panel(class="wow fadeIn" data-wow-duration="2s" data-wow-offset="50")
+                    .heading Клиента устраивает время
+                    .content
+                        ul
+                            li - Договорились! Вы записаны на ____(дата) в ____(время) на _______(услуга).
+                .panel(class="wow fadeIn" data-wow-duration="2s" data-wow-offset="50")
+                    .heading Клиента не устраивает время
+                    .content
+                        ul
+                            li - ____(имя клиента), давайте в таком случае подберем для вас другое удобное время. Вам когда было бы удобней?
+                            li - ...
+                            li - Отлично, в таком случае, если кто-то откажется я вас сразу же наберу! Спасибо, что выбрали наш салон! До скорой встречи!
+            h3 Допродажа
+            .accordion-container
+                .panel(class="wow fadeIn" data-wow-duration="2s" data-wow-offset="50")
+                    .heading Вариант 1
+                    .content
+                        ul
+                            li - _____(имя клиента), обычно наши клиенты в дополнении к услуге _____ делают еще _____(сопутствующая услуга). Хотели бы записаться на нее?
+                            li - ...
+                .panel(class="wow fadeIn" data-wow-duration="2s" data-wow-offset="50")
+                    .heading Вариант 2
+                    .content
+                        p.other-title *если клиент выбирает услугу где ему какое-то время, необходимо будет ждать. Например: окрашивание, лечение волос
+                        ul
+                            li - _____(имя клиента), для того чтобы вы провели время с пользой, во время ____(окрашивания/лечения волос), мы можем предложить вам услуги для бровей и ресниц. Хотели бы сразу записаться?
+                            li - ...
+                            li - * Если клиент согласен на дополнительную услугу. Хорошо. Тогда так же записываем вас на ___(название услуги).
+                            li - * Если клиент не согласен на дополнительную услугу. Услышала вас. Если вы захотите воспользоваться дополнительными услугами в салоне, тогда сообщите об этом вашему мастеру во время процедуры и он вас запишет. Хорошо?
+                            li - ...
+                            li - За день до процедуры/услуги мы еще вас наберем с напоминанием и подтверждением вашей записи. Хорошо? Отлично тогда на связи! Хорошего дня!
+
+block footer
+    include ../modules/footer
+
+block scripts
+    script(type="text/javascript" src="../slick/slick.min.js")
+    script(src="../js/wow.min.js")
+    script(src="../js/script.js")

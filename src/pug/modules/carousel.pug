@@ -1,0 +1,8 @@
+- const arr = [4680, 5126, 3716, 3769, 3804, 4684, 4694, 5071, 9529]
+
+mixin slide(src)
+    img.slide(src=src alt="#" style="object-fit: cover")
+
+.carousel
+    for i in arr
+        +slide(`img/gallery/IMG_${i}.JPG`)

@@ -1,0 +1,34 @@
+extends pug/layout/main
+
+block style
+    link(rel="stylesheet" type="text/css" href="slick/slick.css")
+    link(rel="stylesheet" type="text/css" href="slick/slick-theme.css")
+    link(rel="stylesheet" href="css/style.css")
+
+block title
+    title BARLY
+
+block header
+    block variables
+        - const slider = true
+    include pug/modules/header
+
+block content
+    .wrapper
+        h2 №1 В Окрашивании волос
+        p(class="main-subtitle wow fadeIn" data-wow-duration="3s") Данный ресурс содержит полную информацию о выявлении потребностей клиента, презентации услуг, детальное описание всей продукции, работе с возражениями. Так же алгоритм работы с входящими звонками, перезвоном, подтверждением записи и обратной связью. Чек-листы общения с клиентом в салоне, ведения переписки и многое, многое другое.
+        include pug/mixins/section
+        +section('DIAGNOSTIC', 'img/sections-bg/IMG_3761.JPG', 'fadeInRight', '/pages/diagnostic.html')
+        +section('DESCRIPTION OF SERVICES', 'img/sections-bg/IMG_9482.JPG', 'fadeInLeft', '/pages/description-of-services.html')
+        +section('PRODUCTS DESCRIPTION', 'img/sections-bg/IMG_4707.JPG', 'fadeInRight', '/pages/products-description.html')
+        +section('WORK WITH OBJECTIONS', 'img/sections-bg/IMG_6098.jpg', 'fadeInLeft', '/pages/work-with-objections.html')
+        +section('INCOMING CALL TO BARLY', 'img/sections-bg/IMG_6060.jpg', 'fadeInRight', '/pages/incoming-call.html')
+        +section('CALL BACK', 'img/sections-bg/IMG_4678.JPG', 'fadeInLeft', '/pages/call-back.html')
+
+block footer
+    include pug/modules/footer
+
+block scripts
+    script(type="text/javascript" src="slick/slick.min.js")
+    script(src="js/wow.min.js")
+    script(src="js/script.js")

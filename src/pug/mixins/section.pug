@@ -1,0 +1,4 @@
+mixin section(title, bg, style, link)
+    .block
+        a(class=`link wow ${style}` href=`${link}` target="_self"  data-wow-offset='50' data-wow-duration="2s" style=`background-image: url(${bg})`)
+            span.title=title

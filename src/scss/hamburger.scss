@@ -1,0 +1,35 @@
+.hamb {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  font-size: 2em;
+  z-index: 1;
+  & a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+#mainnav {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  z-index: 111;
+  & li {
+    margin: 40px 0;
+    left: -550px;
+    position: relative;
+    display: none;
+  }
+  & a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+  }
+}
+
+.gap{
+  color: white;
+  margin-top: 50px;
+  width: 280px;
+}
